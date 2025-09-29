@@ -1,0 +1,337 @@
+/* ================================ Global Typography & Colors ================================ */
+
+:root {
+    /* Core Brand Colors */
+    --color-bg: #000111;        /* Elegant Black */
+    --color-primary: #1E90FF;   /* Dodger Blue */
+    --color-secondary: #0d6efd; /* Bright Blue */
+    --color-tertiary: #0437F2;  /* Ultramarine Blue */
+
+    /* Page Colors */
+    --color-container: #1a1a1a;     /* Main Background Section / Paragraph Color */
+    --color-container-alt: #1e1e1e; /* Alternatif section / card color ==> more light */
+    --color-card: #222222;          /* Card /highlight block / testimonial */
+    --color-card-alt: #2a2a2a;      /* Card / Block secondary ==> more high contras */
+    --color-overlay: rgb(255,255,255,0.05)  /* Overlay transparent */
+
+    /* Font Colors */
+    --color-light: #f5f5f5;        /* Heading color */
+    --color-semi-light: #e0e0e0; /* Paragraph Color */
+
+    /* Font Families */
+    --font-fm-base: 'Poppins', 'Roboto', 'Montserrat',sans-serif; 
+    --font-logo: 'Montserrat', sans-serif; 
+    --font-heading: 'Poppins', sans-serif; 
+    --font-body: 'Roboto', sans-serif;
+
+    /* Base Font Size */
+    font-size: 62.5%;
+
+    /* Font Size Scale */
+    /* 62.5% x 16px = 10px */
+    /* 1rem = 10px */
+    --fs-xs: 1.2rem;  /*12px*/
+    --fs-sm: 1.4rem;  /*14px*/
+    --fs-bs: 1.6rem;  /*16px*/
+    --fs-lg: 1.8rem;  /*18px*/
+    --fs-xl: 2rem;    /*20px*/
+    --fs-2xl: 2.4rem; /*24px*/
+    --fs-3xl: 3rem;   /*30px*/
+    --fs-4xl: 3.6rem; /*36px*/
+    --fs-5xl: 4.8rem; /*48px*/
+
+    /* Line Heights */
+    --lh-tight: 1.8rem;   /*18px*/
+    --lh-normal: 2.4rem;  /*24px*/
+    --lh-relaxed: 2.8rem; /*28px*/
+
+    /* Font Weights */
+    --fw-normal: 400;
+    --fw-semi-bold: 500;
+    --fw-bold: 700;
+}
+
+html, body {
+    font-family: var(--font-fm-base);
+    font-size: var(--fs-bs); 
+    line-height: var(--lh-normal);
+    color: var(--color-semi-light);
+    background: var(--color-bg);
+    max-width: 100%;
+    margin: 0;
+    padding: 0; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-tight);
+    color: var(--color-light);
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: var(--fs-bs);
+    line-height: var(--lh-relaxed);
+    font-weight: var(--fw-normal);
+    color: var(--color-semi-light);
+    margin-bottom: 10px;
+}
+
+/* Headings */
+h1 { font-size: var(--fs-5xl); }
+h2 { font-size: var(--fs-4xl); }
+h3 { font-size: var(--fs-3xl); }
+h4 { font-size: var(--fs-2xl); }
+h5 { font-size: var(--fs-xl); }
+h6 { font-size: var(--fs-lg); }
+
+a { text-decoration: none; }
+
+img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+}
+
+/* ================================ Reset & Base Styles ================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--fs-bs);
+    line-height: var(--lh-normal);
+    color: var(--color-semi-light);
+    background-color: var(--color-light);
+}
+
+/* ================================ Headings ================================ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: var(--lh-normal);
+    margin-bottom: 0.75em;
+    color: var(--color-light);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+/* ================================ Paragraphs & Text ================================ */
+p {
+    margin-bottom: 1.25em;
+    color: var(--color-semi-light);
+    font-size: var(--fs-bs);
+}
+
+small {
+    font-size: var(--fs-sm);
+    color: var(--color-semi-light);
+}
+
+strong {
+    font-weight: var(--fw-bold);
+    color: var(--color-semi-light);
+}
+
+/* ================================ Links ================================ */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-tertiary);
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+/* ================================ Buttons ================================ */
+button, .btn {
+    display: inline-block;
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    padding: 0.75em 1.5em;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* ================================ Sections ================================ */
+section {
+    padding: 4rem 1.5rem;
+}
+
+.section-title {
+    font-size: var(--fs-h2);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: var(--fs-body);
+    color: var(--color-gray);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+/* ===== NAVBAR ===== */
+.navbar {
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-card);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+/* ===== HERO ===== */
+#hero {
+    text-align: center;
+    padding: 6rem 1rem;
+    background: var(--color-bg);
+    color: var(--color-semi-light);
+}
+
+#hero h1 {
+    font-size: var(--fs-h1);
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    color: white;
+    margin-bottom: 1.25rem;
+}
+
+/* ===== SKILLS ===== */
+.skills-list {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.skill {
+    padding: 0.5rem 1rem;
+    background: #e5f0ff;
+    border-radius: 0.5rem;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* ===== PROJECTS ===== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+/* ===== CONTACT ===== */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    font-size: var(--fs-body);
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #f3f4f6;
+    color: var(--color-gray);
+    font-size: var(--fs-small);
+}
