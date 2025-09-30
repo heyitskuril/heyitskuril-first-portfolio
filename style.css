@@ -59,47 +59,29 @@
 /* =============== Style Usage for Body and Text Elements ===============*/
 html, body {
     font-family: var(--font-fm-base);
-    font-size: 62.5%; /* 1rem = 10px */
+    font-size: 62.5%; /* ======> 1rem = 10px */
     line-height: var(--lh-normal);
     color: var(--color-semi-light);
     background: var(--color-bg);
     scroll-behavior: smooth;
     max-width: 90%;
     margin: 0 auto;
-    padding: 0; 
+    padding: 0;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
     font-weight: var(--fw-bold);
     line-height: var(--lh-tight);
     color: var(--color-light);
-    margin-bottom: 1rem;
 }
-
-h1 { font-size: var(--fs-5xl); }
-h2 { font-size: var(--fs-4xl); }
-h3 { font-size: var(--fs-3xl); }
-h4 { font-size: var(--fs-2xl); }
-h5 { font-size: var(--fs-xl); }
-h6 { font-size: var(--fs-lg); }
 
 /* Paragraph */
 p {
-    font-size: var(--fs-bs);
-    line-height: var(--lh-relaxed);
+    font-family: var(--font-body);
     font-weight: var(--fw-normal);
-    color: var(--color-semi-light);
-    margin-bottom: 1.2rem;
-}
-
-small {
-    font-size: var(--fs-sm);
-    color: var(--color-semi-light);
-}
-
-strong {
-    font-weight: var(--fw-bold);
+    line-height: var(--lh-relaxed);
     color: var(--color-semi-light);
 }
 
@@ -113,47 +95,25 @@ img {
 /* Links */
 a {
     text-decoration: none;
-    /* color: var(--color-primary);
-    transition: color 0.2s ease, border-bottom 0.2s ease; */
 }
-
-/* a:hover {
-    color: var(--color-tertiary);
-    border-bottom: 0.2rem solid var(--color-secondary);
-}
-
-a:focus {
-    outline: 0.2rem solid var(--color-secondary);
-    outline-offset: 0.2rem;
-} */
 
 /* ================================ NAVBAR ================================ */
 .navbar {
     font-family: var(--font-heading);
     font-size: var(--fs-lg);
     font-weight: var(--fw-semi-bold);
-    background: var(--color-bg);
     border-bottom: 1px solid var(--color-card);
-    padding: 1rem 0;
+    padding: 1rem;
     position: sticky;
+    background: transparent;
     top: 0;
     z-index: 9999;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
 }
 
 .logo {
     font-family: var(--font-logo);
     font-size: var(--fs-2xl);
     font-weight: var(--fw-bold);
-    margin-top: 1rem;
     color: var(--color-primary);
 }
 
@@ -171,6 +131,57 @@ a:focus {
 .nav-links a:hover {
     color: var(--color-primary);
     transition: ease-in-out 0.3s;
+}
+
+/* ==================== CONTAINER ==================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    background-color: var(--color-bg);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.home-container {
+    text-align: center;
+    padding: 20rem 1.5rem;
+}
+
+.about-container {
+    padding: 8rem 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+}
+
+.skills-container {
+    padding: 8rem 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+}
+
+.projects-container {
+    padding: 8rem 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+}
+
+.contact-container {
+    padding: 8rem 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+}
+
+.footer-container {
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--color-card);
 }
 
 /* ====================== Buttons ====================== */
@@ -228,7 +239,6 @@ button, .btn {
     text-align: center;
     margin: 0;
     padding: 20rem 5rem;
-    background: var(--color-bg);
 }
 
 #home h1 {
@@ -261,10 +271,8 @@ button, .btn {
 
 /* =============== About Section =============== */
 #about {
-    background: var(--color-container);
     padding: 8rem 5rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     margin-bottom: 5rem;
 }
 #about h1 {
@@ -333,10 +341,8 @@ button, .btn {
 
 /* =============== Skills Section =============== */
 #skills {
-    background: var(--color-container-alt);
     padding: 8rem 5rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     margin-bottom: 5rem;
 }
 
@@ -368,15 +374,12 @@ button, .btn {
     border-radius: 0.5rem;
     font-size: var(--fs-lg);
     font-weight: var(--fw-semi-bold);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* =============== Projects Section =============== */
 #projects {
-    background: var(--color-container);
     padding: 8rem 5rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     margin-bottom: 5rem;
 }
 
@@ -415,19 +418,15 @@ button, .btn {
 }
 
 .project-card {
-    background: var(--color-card);
     padding: 2rem;
     border-radius: 0.75rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     text-align: center;
 }
 
 /* =============== Contact Section =============== */
 #contact {
-    background: var(--color-container-alt);
     padding: 8rem 5rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     margin-bottom: 5rem;
 }
 
@@ -476,9 +475,7 @@ button, .btn {
 
 /* =============== Footer Section =============== */
 #footer {
-    background: var(--color-bg);
     padding: 2rem 1rem;
-    border-top: 1px solid var(--color-card);
 }
 
 #footer p {
