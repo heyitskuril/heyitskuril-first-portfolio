@@ -1,117 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@600&family=Roboto:wght@300&display=swap"rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kuril's personal portfolio — aspiring web developer passionate about modern design and clean code." />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css" />
-    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="mediaqueries.css" />
     <script defer src="src/script.js"></script>
-    <title>Kuril | First Portfolio Website</title>
-</head>
-<body>
 
-    <!-- ===== NAVBAR ===== -->
+    <title>Kuril | Web Developer Portfolio</title>
+    </head>
+    <body>
+
+    <!-- ===== HEADER / NAVBAR ===== -->
     <header class="navbar">
         <div class="container nav-container">
-            <h1 class="logo">heyitskuril</h1>
-            <nav>
+        <a href="#home" class="logo">heyitskuril</a>
+        <nav aria-label="Main Navigation">
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
             </ul>
-            </nav>
+        </nav>
         </div>
     </header>
 
-    <!-- ===== HOME SECTION ===== -->
-    <section id="home">
-        <div class="container home-content">
-            <h1 class="myName">KURIL</h1>
-            <h1 class="myRole">Aspiring Web Developer</h1>
-            <p class="myTagline">"I turn coffee into code and ideas into reality".</p>
-            <button class="btn"><a href="#about" class="btn-primary">Learn more about me <span class="arrow">➺</span></a></button>
-        </div>
-    </section>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
 
-    <!-- ===== ABOUT SECTION ===== -->
-    <section id="about">
+        <!-- ===== HERO SECTION ===== -->
+        <section id="home" class="hero" aria-labelledby="hero-heading">
+        <div class="container home-content">
+            <h1 id="hero-heading" class="myName">KURIL</h1>
+            <p class="myRole">Aspiring Web Developer</p>
+            <p class="myTagline">"I turn coffee into code and ideas into reality."</p>
+            <a href="#about" class="btn btn-primary">Learn more about me <span class="arrow">➺</span></a>
+        </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section id="about" aria-labelledby="about-heading">
         <div class="container about-container">
-            <h1 class="section-title">About Me</h1>
-            <div class="section-photo">
-                <img src="" alt="My Photo" class="about-photo">
-            </div>
-            <div class="section-profile">
+            <h2 id="about-heading" class="section-title">About Me</h2>
+            <div class="about-content">
+            <figure class="about-photo-wrapper">
+                <img src="images/My-Photo-Profile.jpg" alt="Portrait of Kuril" class="about-photo" />
+                <figcaption>Kuril — Junior Web Developer</figcaption>
+            </figure>
+            <div class="about-text">
                 <h3 class="profile-name">heyitskuril</h3>
-                <img src="my.country.jpg" alt="my country" class="about-country">
-                <p class="profile-subtitle">
-                    I'm a passionate junior web developer with a love for creating beautiful, functional websites and applications. 
-                    I enjoy turning complex problems into simple, elegant solutions through clean code and thoughtful design.
-                    <br>
-                    Currently focused on modern web technologies and always eager to learn new tools and frameworks to deliver the best user experiences.
+                <img src="images/my.country.jpg" alt="My country flag" class="about-country" />
+                <p>
+                I'm a passionate junior web developer who loves creating beautiful, functional websites and apps. 
+                I focus on turning complex problems into simple, elegant solutions through clean code and thoughtful design.
+                </p>
+                <p>
+                Currently exploring modern web technologies and frameworks to craft seamless user experiences and efficient front-end systems.
                 </p>
             </div>
+            </div>
         </div>
-    </section>
+        </section>
 
-    <!-- ===== SKILLS SECTION ===== -->
-    <section id="skills">
+        <!-- ===== SKILLS SECTION ===== -->
+        <section id="skills" aria-labelledby="skills-heading">
         <div class="container skills-container">
-            <h1 class="section-title">Skills</h1>
-            <h2 class="section-subtitle">Here are the technologies I work with:</h2>
-            <div class="skills-list">
-                <span class="skill">HTML</span>
-                <span class="skill">CSS</span>
-                <span class="skill">Figma</span>
-            </div>
+            <h2 id="skills-heading" class="section-title">Skills</h2>
+            <p class="section-subtitle">Here are the technologies I work with:</p>
+            <ul class="skills-list">
+            <li class="skill">HTML</li>
+            <li class="skill">CSS</li>
+            <li class="skill">Figma</li>
+            </ul>
         </div>
-    </section>
+        </section>
 
-    <!-- ===== PROJECTS SECTION ===== -->
-    <section id="projects">
+        <!-- ===== PROJECTS SECTION ===== -->
+        <section id="projects" aria-labelledby="projects-heading">
         <div class="container projects-container">
-            <h1 class="section-title">Projects</h1>
-            <h2 class="section-subtitle">Some of the work I've built:</h2>
+            <h2 id="projects-heading" class="section-title">Projects</h2>
+            <p class="section-subtitle">Some of the work I've built:</p>
             <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Portfolio Website</h3>
-                    <p>A responsive portfolio to showcase my work.</p>
-                    <a href="#" class="btn btn-outline">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Notion Template</h3>
-                    <p>A gamified Notion planner for productivity.</p>
-                    <a href="#" class="btn btn-outline">View Project</a>
-                </div>
+            <article class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A responsive portfolio to showcase my work and skills.</p>
+                <a href="#" class="btn btn-outline" aria-label="View Portfolio Website Project">View Project</a>
+            </article>
+
+            <article class="project-card">
+                <h3>Notion Template</h3>
+                <p>A gamified Notion planner for productivity and focus.</p>
+                <a href="#" class="btn btn-outline" aria-label="View Notion Template Project">View Project</a>
+            </article>
             </div>
         </div>
-    </section>
+        </section>
 
-    <!-- ===== CONTACT SECTION ===== -->
-    <section id="contact">
+        <!-- ===== CONTACT SECTION ===== -->
+        <section id="contact" aria-labelledby="contact-heading">
         <div class="container contact-container">
-            <h1 class="section-title">Contact Me</h1>
-            <h2 class="section-subtitle">Interested in working together? Let's connect!</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn btn-primary">Send Message</button>
+            <h2 id="contact-heading" class="section-title">Contact Me</h2>
+            <p class="section-subtitle">Interested in working together? Let’s connect!</p>
+            <form class="contact-form" aria-label="Contact form">
+            <label for="name" class="visually-hidden">Your Name</label>
+            <input id="name" type="text" placeholder="Your Name" required>
+
+            <label for="email" class="visually-hidden">Your Email</label>
+            <input id="email" type="email" placeholder="Your Email" required>
+
+            <label for="message" class="visually-hidden">Your Message</label>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
         </div>
-    </section>
+        </section>
+
+    </main>
 
     <!-- ===== FOOTER ===== -->
-    <section id="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container footer-container">
-            <footer class="myFooter">
-                <p>© 2025 Kuril. All rights reserved.</p>
-            </footer>
+        <p>© 2025 Kuril. All rights reserved.</p>
         </div>
-    </section>
+    </footer>
 
 </body>
 </html>
