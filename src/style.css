@@ -1,7 +1,5 @@
 /* ================================ Reset & Base ================================ */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -30,32 +28,23 @@
 
 /* ================================ Design Tokens ================================ */
 :root {
-  /* Core colors */
   --color-bg: #000111;
   --color-bg-2: #001122;
   --color-primary: #1E90FF;
   --color-secondary: #0d6efd;
   --color-tertiary: #0437F2;
   --color-accent: #7CFFB2;
-
-  /* Text */
   --color-light: #f5f5f5;
   --color-semi-light: #e0e0e0;
   --color-muted: rgba(224, 224, 224, 0.68);
-
-  /* Surfaces */
   --color-card: rgba(255, 255, 255, 0.06);
   --color-card-hover: rgba(255, 255, 255, 0.09);
   --color-container: rgba(255, 255, 255, 0.02);
   --color-border: rgba(255, 255, 255, 0.08);
-
-  /* Fonts */
   --font-fm-base: 'Poppins', 'Roboto', 'Montserrat', sans-serif;
   --font-logo: 'Montserrat', sans-serif;
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Roboto', sans-serif;
-
-  /* Type scale */
   --fs-xs: 1.2rem;
   --fs-sm: 1.4rem;
   --fs-bs: 1.6rem;
@@ -66,40 +55,28 @@
   --fs-4xl: 3.6rem;
   --fs-5xl: 4.8rem;
   --fs-6xl: 6rem;
-
-  /* Line-heights */
   --lh-tight: 1.2;
   --lh-snug: 1.4;
   --lh-normal: 1.6;
   --lh-relaxed: 1.8;
-
-  /* Weights */
   --fw-light: 300;
   --fw-normal: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
-
-  /* Spacing */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 2rem;
   --space-lg: 4rem;
   --space-xl: 6rem;
-
-  /* Radii */
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-full: 9999px;
-
-  /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.25);
   --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.35);
   --shadow-glow: 0 0 24px rgba(30, 144, 255, 0.3);
-
-  /* Container */
   --container-max: 1280px;
   --container-padding: 2rem;
 }
@@ -125,16 +102,11 @@ body {
   position: relative;
 }
 
-/* Animated gradient background */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background: radial-gradient(
-    ellipse 80% 50% at 50% -20%,
-    rgba(30, 144, 255, 0.15),
-    transparent
-  );
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(30, 144, 255, 0.15), transparent);
   pointer-events: none;
   z-index: -1;
 }
@@ -249,11 +221,7 @@ img {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(30, 144, 255, 0.05),
-    transparent
-  );
+  background: linear-gradient(180deg, rgba(30, 144, 255, 0.05), transparent);
   border-radius: inherit;
   pointer-events: none;
 }
@@ -323,6 +291,24 @@ img {
 
 .nav-links a:hover {
   color: var(--color-primary);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: var(--color-light);
+  margin: 3px 0;
+  transition: all var(--transition) var(--ease);
 }
 
 /* ================================ BUTTONS ================================ */
@@ -467,10 +453,6 @@ img {
   position: relative;
 }
 
-.myName::after {
-  content: none;
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -538,6 +520,7 @@ img {
   transition: all var(--transition) var(--ease);
   position: relative;
 }
+
 
 .about-photo-wrapper::before {
   content: '';
@@ -814,6 +797,22 @@ figcaption {
   margin: 1rem auto 0;
 }
 
+/* ================================ BACK TO TOP ================================ */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition) var(--ease);
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* ================================ FOOTER ================================ */
 .footer {
   margin-top: var(--space-xl);
@@ -830,10 +829,70 @@ figcaption {
   margin: 0;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.6rem;
+}
+
+.social-links a {
+  font-size: var(--fs-xl);
+  color: var(--color-muted);
+  transition: color var(--transition) var(--ease);
+}
+
+.social-links a:hover {
+  color: var(--color-primary);
+}
+
+/* ================================ ANIMATIONS ================================ */
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+
+.section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ================================ RESPONSIVE ================================ */
 @media (max-width: 900px) {
   .nav-links {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 1, 17, 0.95);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    gap: 2rem;
+    padding: 8rem 2rem 2rem;
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.5);
+    transition: right var(--transition) var(--ease);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 
   .about-content {
@@ -927,14 +986,4 @@ figcaption {
 
 .hide {
   display: none !important;
-}
-
-/* ================================ ANIMATIONS ================================ */
-@keyframes shimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
 }

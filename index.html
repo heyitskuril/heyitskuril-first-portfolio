@@ -4,129 +4,148 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Kuril's personal portfolio — aspiring web developer passionate about modern design and clean code." />
-    
+    <meta name="keywords" content="web developer, portfolio, HTML, CSS, JavaScript, Kuril" />
+    <meta name="author" content="Kuril" />
+    <meta property="og:title" content="Kuril | Web Developer Portfolio" />
+    <meta property="og:description" content="Aspiring web developer showcasing projects and skills." />
+    <meta property="og:image" content="images/My-Photo-Profile.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-    <script defer src="src/script.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="src/style.css">
+    <script src="src/script.js"></script>
     <title>Kuril | Web Developer Portfolio</title>
-    </head>
-    <body>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- ===== HEADER / NAVBAR ===== -->
     <header class="navbar">
         <div class="container nav-container">
-        <a href="#home" class="logo">heyitskuril</a>
-        <nav aria-label="Main Navigation">
-            <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+            <a href="#home" class="logo">heyitskuril</a>
+            <nav aria-label="Main Navigation">
+                <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <!-- ===== MAIN CONTENT ===== -->
-    <main>
-
+    <main id="main">
         <!-- ===== HERO SECTION ===== -->
         <section id="home" class="hero" aria-labelledby="hero-heading">
-        <div class="container home-content">
-            <h1 id="hero-heading" class="myName">KURIL</h1>
-            <p class="myRole">Aspiring Web Developer</p>
-            <p class="myTagline">"I turn coffee into code and ideas into reality."</p>
-            <a href="#about" class="btn btn-primary">Learn more about me <span class="arrow">➺</span></a>
-        </div>
+            <div class="container home-content">
+                <h1 id="hero-heading" class="myName">KURIL</h1>
+                <p class="myRole">Aspiring Web Developer</p>
+                <p class="myTagline">"I turn coffee into code and ideas into reality."</p>
+                <a href="#about" class="btn btn-primary">Learn more about me <span class="arrow">➺</span></a>
+            </div>
         </section>
 
         <!-- ===== ABOUT SECTION ===== -->
-        <section id="about" aria-labelledby="about-heading">
-        <div class="container about-container">
-            <h2 id="about-heading" class="section-title">About Me</h2>
-            <div class="about-content">
-            <figure class="about-photo-wrapper">
-                <img src="images/My-Photo-Profile.jpg" alt="Portrait of Kuril" class="about-photo" />
-                <figcaption>Kuril — Junior Web Developer</figcaption>
-            </figure>
-            <div class="about-text">
-                <h3 class="profile-name">heyitskuril</h3>
-                <img src="images/my.country.jpg" alt="My country flag" class="about-country" />
-                <p>
-                I'm a passionate junior web developer who loves creating beautiful, functional websites and apps. 
-                I focus on turning complex problems into simple, elegant solutions through clean code and thoughtful design.
-                </p>
-                <p>
-                Currently exploring modern web technologies and frameworks to craft seamless user experiences and efficient front-end systems.
-                </p>
+        <section id="about" class="section fade-in" aria-labelledby="about-heading">
+            <div class="container about-container">
+                <h2 id="about-heading" class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know the developer behind the code.</p>
+                <div class="about-content">
+                    <figure class="about-photo-wrapper">
+                        <img src="images/My-Photo-Profile.jpg" alt="Portrait of Kuril, a web developer" class="about-photo" loading="lazy" />
+                        <figcaption>Kuril — Junior Web Developer</figcaption>
+                    </figure>
+                    <div class="about-text">
+                        <h3 class="profile-name">heyitskuril</h3>
+                        <img src="images/my.country.jpg" alt="Flag representing Jakarta, Indonesia" class="about-country" loading="lazy" />
+                        <p>I'm a passionate junior web developer who loves creating beautiful, functional websites and apps. I focus on turning complex problems into simple, elegant solutions through clean code and thoughtful design.</p>
+                        <p>Currently exploring modern web technologies and frameworks to craft seamless user experiences and efficient front-end systems. When not coding, you'll find me sipping coffee or brainstorming the next big idea.</p>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
         </section>
 
         <!-- ===== SKILLS SECTION ===== -->
-        <section id="skills" aria-labelledby="skills-heading">
-        <div class="container skills-container">
-            <h2 id="skills-heading" class="section-title">Skills</h2>
-            <p class="section-subtitle">Here are the technologies I work with:</p>
-            <ul class="skills-list">
-            <li class="skill">HTML</li>
-            <li class="skill">CSS</li>
-            <li class="skill">Figma</li>
-            </ul>
-        </div>
+        <section id="skills" class="section fade-in" aria-labelledby="skills-heading">
+            <div class="container skills-container">
+                <h2 id="skills-heading" class="section-title">Skills</h2>
+                <p class="section-subtitle">Technologies I work with to build amazing things.</p>
+                <ul class="skills-list">
+                    <li class="skill">HTML</li>
+                    <li class="skill">CSS</li>
+                    <li class="skill">JavaScript</li>
+                    <li class="skill">React</li>
+                    <li class="skill">Figma</li>
+                    <li class="skill">Git</li>
+                    <li class="skill">Node.js</li>
+                </ul>
+            </div>
         </section>
 
         <!-- ===== PROJECTS SECTION ===== -->
-        <section id="projects" aria-labelledby="projects-heading">
-        <div class="container projects-container">
-            <h2 id="projects-heading" class="section-title">Projects</h2>
-            <p class="section-subtitle">Some of the work I've built:</p>
-            <div class="projects-grid">
-            <article class="project-card">
-                <h3>Portfolio Website</h3>
-                <p>A responsive portfolio to showcase my work and skills.</p>
-                <a href="#" class="btn btn-outline" aria-label="View Portfolio Website Project">View Project</a>
-            </article>
-
-            <article class="project-card">
-                <h3>Notion Template</h3>
-                <p>A gamified Notion planner for productivity and focus.</p>
-                <a href="#" class="btn btn-outline" aria-label="View Notion Template Project">View Project</a>
-            </article>
+        <section id="projects" class="section fade-in" aria-labelledby="projects-heading">
+            <div class="container projects-container">
+                <h2 id="projects-heading" class="section-title">Projects</h2>
+                <p class="section-subtitle">Some of the work I've built — check them out!</p>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3>Portfolio Website</h3>
+                        <p>A responsive portfolio to showcase my work and skills, built with HTML, CSS, and JS.</p>
+                        <a href="https://github.com/yourusername/portfolio" class="btn btn-outline" aria-label="View Portfolio Website Project on GitHub">View Project</a>
+                    </article>
+                    <article class="project-card">
+                        <h3>Notion Template</h3>
+                        <p>A gamified Notion planner for productivity and focus, customizable for daily use.</p>
+                        <a href="https://www.notion.so/template/your-template" class="btn btn-outline" aria-label="View Notion Template Project">View Project</a>
+                    </article>
+                    <article class="project-card">
+                        <h3>Weather App</h3>
+                        <p>A simple React app fetching real-time weather data via API, with a clean UI.</p>
+                        <a href="https://github.com/yourusername/weather-app" class="btn btn-outline" aria-label="View Weather App Project">View Project</a>
+                    </article>
+                </div>
             </div>
-        </div>
         </section>
 
         <!-- ===== CONTACT SECTION ===== -->
-        <section id="contact" aria-labelledby="contact-heading">
-        <div class="container contact-container">
-            <h2 id="contact-heading" class="section-title">Contact Me</h2>
-            <p class="section-subtitle">Interested in working together? Let’s connect!</p>
-            <form class="contact-form" aria-label="Contact form">
-            <label for="name" class="visually-hidden">Your Name</label>
-            <input id="name" type="text" placeholder="Your Name" required>
-
-            <label for="email" class="visually-hidden">Your Email</label>
-            <input id="email" type="email" placeholder="Your Email" required>
-
-            <label for="message" class="visually-hidden">Your Message</label>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-
-            <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-        </div>
+        <section id="contact" class="section fade-in" aria-labelledby="contact-heading">
+            <div class="container contact-container">
+                <h2 id="contact-heading" class="section-title">Contact Me</h2>
+                <p class="section-subtitle">Interested in working together? Let’s connect!</p>
+                <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST" aria-label="Contact form">
+                    <label for="name" class="visually-hidden">Your Name</label>
+                    <input id="name" type="text" name="name" placeholder="Your Name" required>
+                    <label for="email" class="visually-hidden">Your Email</label>
+                    <input id="email" type="email" name="email" placeholder="Your Email" required>
+                    <label for="message" class="visually-hidden">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
         </section>
-
     </main>
+
+    <!-- ===== BACK TO TOP BUTTON ===== -->
+    <button id="back-to-top" class="btn btn-primary" aria-label="Back to top">↑</button>
 
     <!-- ===== FOOTER ===== -->
     <footer class="footer" role="contentinfo">
         <div class="container footer-container">
-        <p>© 2025 Kuril. All rights reserved.</p>
+            <p>© 2025 Kuril. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:your.email@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </footer>
 
