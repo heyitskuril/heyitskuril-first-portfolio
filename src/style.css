@@ -340,7 +340,6 @@ a:hover {
 .about-content {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-xl);
   align-items: center;
   justify-content: center;
 }
