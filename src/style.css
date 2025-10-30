@@ -26,6 +26,7 @@
   --font-logo: 'Montserrat', sans-serif;
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Roboto', sans-serif;
+
   --fs-xs: 1.2rem;
   --fs-sm: 1.4rem;
   --fs-base: 1.6rem;
@@ -42,7 +43,7 @@
   --lh-snug: 1.35;
   --lh-normal: 1.5;
   --lh-relaxed: 1.65;
-  
+
   --fw-light: 300;
   --fw-normal: 400;
   --fw-medium: 500;
@@ -139,7 +140,7 @@ a:hover {
   font-size: var(--fs-3xl);
   font-weight: var(--fw-bold);
   text-align: center;
-  margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
   color: #fff;
 }
 
@@ -147,7 +148,7 @@ a:hover {
   font-size: var(--fs-md);
   color: var(--color-text-muted);
   text-align: center;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-sm);
 }
 
 /* ================================ Navbar ================================ */
@@ -177,7 +178,7 @@ a:hover {
   font-size: var(--fs-lg);
   font-weight: var(--fw-bold);
   color: var(--color-primary);
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .nav-links {
@@ -295,13 +296,11 @@ a:hover {
 }
 
 .btn-primary {
-  background: var(--color-primary);
   color: #fff;
   box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
-  background: var(--color-tertiary);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
@@ -352,8 +351,8 @@ a:hover {
 }
 
 .about-photo {
-  width: 220px;
-  height: 220px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(0, 140, 255, 0.3);
